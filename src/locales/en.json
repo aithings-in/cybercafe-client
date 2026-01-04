@@ -1,0 +1,372 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "pages": "Pages",
+    "blog": "Blog",
+    "contact": "Contact",
+    "getFreeQuotes": "Get Free Quotes",
+    "readMore": "Read More",
+    "sendMessage": "Send Message",
+    "subscribeNow": "Subscribe Now",
+    "backToServices": "Back to Services",
+    "serviceNotFound": "Service Not Found",
+    "serviceNotFoundDesc": "The service you're looking for doesn't exist.",
+    "loading": "Loading..."
+  },
+  "header": {
+    "title": "Cyber Cafe"
+  },
+  "hero": {
+    "slides": [
+      {
+        "heading": "Your Cyber Security",
+        "headingHighlight": "Is In Your Hand Now",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, magna aliqua. ipsum is simply dummy text of the printing.",
+        "button1": "Our Services",
+        "button2": "Contact Us"
+      },
+      {
+        "heading": "We Provide The Best",
+        "headingHighlight": "Cyber Security",
+        "description": "Protect your digital assets with our cutting-edge cybersecurity solutions. We offer comprehensive protection against all types of cyber threats.",
+        "button1": "Discover More",
+        "button2": "Contact Us"
+      },
+      {
+        "heading": "Advanced Security",
+        "headingHighlight": "Solutions For You",
+        "description": "Trust our team of cybersecurity experts to safeguard your business. We provide 24/7 monitoring and rapid response to security incidents.",
+        "button1": "Learn More",
+        "button2": "Get Started"
+      }
+    ]
+  },
+  "footer": {
+    "companyName": "Cyber Cafe",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
+    "contactInfo": "Contact Info",
+    "address": "770 East Linden Street New York",
+    "phone": "+707 355-633-755",
+    "email": "contact-info@example.com",
+    "ourServices": "Our Services",
+    "services": [
+      "Managed Firewall",
+      "Virtual CISO",
+      "Penetration Testing",
+      "Networking Security",
+      "Cloud Security"
+    ],
+    "subscribeNewsletter": "Subscribe Newsletter",
+    "enterEmail": "Enter your email",
+    "copyright": "© 2023 - All Rights Reserved - Designed by Barakah Themes",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy"
+  },
+  "services": {
+    "title": "What We Provide",
+    "sectionTitle": "Cyber Security Services",
+    "aboutService": "About This Service",
+    "quickOverview": "Quick Overview",
+    "keyFeatures": "Key Features",
+    "benefits": "Benefits",
+    "ourProcess": "Our Process",
+    "getFreeQuote": "Get Free Quote",
+    "items": [
+      {
+        "id": 1,
+        "title": "Typing Master",
+        "shortDescription": "Master the art of fast and accurate typing with our comprehensive typing training program designed for all skill levels.",
+        "fullDescription": "Our Typing Master course is designed to help you develop excellent typing skills with speed and accuracy. Whether you're a beginner or looking to improve your existing typing speed, our structured program covers touch typing techniques, proper finger placement, and practice exercises. Learn to type without looking at the keyboard, increase your words per minute (WPM), and reduce typing errors. Our expert instructors provide personalized guidance and regular assessments to track your progress.",
+        "features": [
+          "Touch typing fundamentals",
+          "Speed building exercises",
+          "Accuracy improvement techniques",
+          "Real-time typing practice",
+          "Progress tracking and assessments",
+          "Personalized instruction"
+        ],
+        "benefits": [
+          "Increase typing speed significantly",
+          "Improve typing accuracy and reduce errors",
+          "Enhance productivity in work and studies",
+          "Build muscle memory for efficient typing",
+          "Boost confidence in computer usage"
+        ],
+        "process": [
+          "Initial typing speed assessment",
+          "Learning proper finger placement and posture",
+          "Progressive typing exercises and drills",
+          "Speed and accuracy building sessions",
+          "Regular practice and progress evaluation"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tally GST",
+        "shortDescription": "Master Tally Prime with GST accounting and become proficient in managing business finances, inventory, and tax compliance.",
+        "fullDescription": "Our Tally GST course provides comprehensive training on Tally Prime software with a focus on GST (Goods and Services Tax) accounting. Learn to create company profiles, manage ledgers, handle inventory, generate invoices, and file GST returns. This course covers all aspects of accounting including financial statements, balance sheets, profit & loss accounts, and tax calculations. Perfect for accounting professionals, business owners, and students looking to build a career in accounting.",
+        "features": [
+          "Tally Prime fundamentals",
+          "GST setup and configuration",
+          "Invoice generation and billing",
+          "Inventory management",
+          "Financial reporting and statements",
+          "GST return filing procedures"
+        ],
+        "benefits": [
+          "Master industry-standard accounting software",
+          "Understand GST compliance and filing",
+          "Improve job prospects in accounting",
+          "Manage business finances effectively",
+          "Stay updated with latest tax regulations"
+        ],
+        "process": [
+          "Introduction to Tally Prime interface",
+          "Company creation and setup",
+          "Ledger and voucher entry",
+          "GST configuration and tax setup",
+          "Invoice creation and billing",
+          "Financial reporting and GST return filing"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Graphic Designing Training",
+        "shortDescription": "Learn professional graphic design skills using industry-standard tools like Adobe Photoshop, Illustrator, and CorelDRAW to create stunning visual designs.",
+        "fullDescription": "Our Graphic Designing Training course equips you with the skills needed to create professional visual designs for print and digital media. Learn to use Adobe Photoshop for image editing and manipulation, Adobe Illustrator for vector graphics and logos, and CorelDRAW for layout design. The course covers design principles, color theory, typography, logo design, brochure creation, social media graphics, and web design elements. Perfect for aspiring graphic designers, marketing professionals, and creative enthusiasts.",
+        "features": [
+          "Adobe Photoshop mastery",
+          "Adobe Illustrator for vector graphics",
+          "CorelDRAW for layout design",
+          "Logo and brand identity design",
+          "Print and digital media design",
+          "Portfolio development"
+        ],
+        "benefits": [
+          "Create professional designs for clients",
+          "Build a strong design portfolio",
+          "Work as a freelance graphic designer",
+          "Enhance marketing and branding skills",
+          "Stay competitive in creative industries"
+        ],
+        "process": [
+          "Introduction to design principles and tools",
+          "Learning Photoshop for image editing",
+          "Mastering Illustrator for vector graphics",
+          "Creating logos and brand identities",
+          "Designing marketing materials and layouts",
+          "Building a professional portfolio"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Excel Training",
+        "shortDescription": "Master Microsoft Excel from basics to advanced level, including formulas, functions, data analysis, pivot tables, and automation.",
+        "fullDescription": "Our Excel Training course covers everything from basic spreadsheet operations to advanced data analysis and automation. Learn essential Excel functions, formulas, data validation, conditional formatting, charts, pivot tables, and macros. The course includes practical exercises on data management, financial calculations, reporting, and dashboard creation. Perfect for office professionals, data analysts, accountants, and anyone who works with spreadsheets regularly.",
+        "features": [
+          "Excel basics and interface navigation",
+          "Formulas and functions mastery",
+          "Data analysis with pivot tables",
+          "Charts and data visualization",
+          "Macros and automation (VBA basics)",
+          "Advanced data management techniques"
+        ],
+        "benefits": [
+          "Increase productivity at work",
+          "Handle complex data analysis tasks",
+          "Create professional reports and dashboards",
+          "Automate repetitive tasks",
+          "Enhance career prospects in data-driven roles"
+        ],
+        "process": [
+          "Excel fundamentals and interface",
+          "Working with formulas and functions",
+          "Data formatting and validation",
+          "Creating charts and visualizations",
+          "Mastering pivot tables and data analysis",
+          "Introduction to macros and automation"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "AutoCAD Training",
+        "shortDescription": "Learn professional CAD (Computer-Aided Design) skills using AutoCAD for architectural, engineering, and technical drawing projects.",
+        "fullDescription": "Our AutoCAD Training course provides comprehensive training on AutoCAD software, the industry-standard tool for 2D and 3D computer-aided design. Learn to create precise technical drawings, architectural plans, engineering designs, and 3D models. The course covers drawing tools, dimensioning, layers, blocks, layouts, 3D modeling, and rendering. Perfect for architects, engineers, drafters, interior designers, and students pursuing careers in design and engineering.",
+        "features": [
+          "2D drawing and drafting",
+          "3D modeling and visualization",
+          "Architectural and engineering drawings",
+          "Dimensioning and annotations",
+          "Layers and blocks management",
+          "Layout and plotting"
+        ],
+        "benefits": [
+          "Create professional technical drawings",
+          "Work in architecture and engineering firms",
+          "Enhance design and drafting skills",
+          "Meet industry standards for CAD work",
+          "Build a portfolio of design projects"
+        ],
+        "process": [
+          "AutoCAD interface and basic tools",
+          "Creating 2D drawings and shapes",
+          "Working with layers and blocks",
+          "Dimensioning and annotations",
+          "Introduction to 3D modeling",
+          "Layout creation and plotting"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "ADCA Training",
+        "shortDescription": "Complete Advanced Diploma in Computer Applications (ADCA) program covering all essential computer skills and software applications.",
+        "fullDescription": "Our ADCA (Advanced Diploma in Computer Applications) course is a comprehensive program that covers fundamental to advanced computer skills. The curriculum includes computer basics, operating systems, Microsoft Office Suite (Word, Excel, PowerPoint), internet and email, basic programming concepts, database management, web design basics, and computer networking fundamentals. This course is ideal for students, job seekers, and professionals looking to enhance their computer literacy and gain a recognized diploma in computer applications.",
+        "features": [
+          "Computer fundamentals and operating systems",
+          "Microsoft Office Suite (Word, Excel, PowerPoint)",
+          "Internet, email, and web browsing",
+          "Basic programming concepts",
+          "Database management basics",
+          "Web design and HTML basics"
+        ],
+        "benefits": [
+          "Gain comprehensive computer knowledge",
+          "Earn a recognized diploma certificate",
+          "Improve job prospects in various industries",
+          "Develop essential digital skills",
+          "Prepare for higher education in IT"
+        ],
+        "process": [
+          "Computer basics and operating system",
+          "Microsoft Word for document creation",
+          "Microsoft Excel for data management",
+          "Microsoft PowerPoint for presentations",
+          "Internet and email usage",
+          "Basic programming and web design concepts"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "contactInformation": "Contact Information",
+    "address": "Address:",
+    "addressValue": "4035 Heavens, Los Angeles, California",
+    "phone": "Phone:",
+    "phone1": "+707 355-633-755",
+    "phone2": "+707 355-633-777",
+    "email": "Email:",
+    "email1": "info@example.com",
+    "email2": "support@example.com",
+    "sendUsMessage": "Send Us a Message",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourPhone": "Your Phone",
+    "yourSubject": "Your Subject",
+    "yourMessage": "Your Message"
+  },
+  "about": {
+    "title": "About Us",
+    "whoWeAre": "Who We Are",
+    "whoWeAreDesc": "SINT Education stands as pioneers in progressive learning, redefining computer education standards worldwide. Led by visionary Director Sudhir Sharma, we are dedicated to shaping future software professionals.",
+    "whatWeDo": "What We Do",
+    "whatWeDoDesc1": "We are committed to providing high-quality, affordable computer education through an innovative one-to-one ratio approach, ensuring personalized attention and access to cutting-edge technology in well-equipped labs.",
+    "whatWeDoDesc2": "Our curriculum seamlessly integrates theoretical knowledge with practical application, facilitated by live demonstrations on Pentium computers. Our mission is to cultivate top-tier software professionals ready for global challenges.",
+    "whyChooseUs": "Why Choose Our Institution?",
+    "whyChooseUsDesc": "Choosing SINT Education means selecting a pathway to excellence. We are committed to quality, high-caliber computer education, and meeting multinational organization standards.",
+    "features": [
+      {
+        "title": "Theory to Practical",
+        "description": "We bridge the gap between theory and practical application seamlessly."
+      },
+      {
+        "title": "Expert Faculty",
+        "description": "15 Years of Teaching Experience (14,500+ Students Trained)."
+      },
+      {
+        "title": "Low Fee Structure",
+        "description": "Minimal costs or charges for accessing a particular service or program."
+      }
+    ]
+  },
+  "stats": {
+    "yearsExperience": "Years of Experience",
+    "devicesProtected": "Devices Protected",
+    "confidentClients": "Confident Clients",
+    "awardsReceived": "Awards Received"
+  },
+  "testimonials": {
+    "sectionTitle": "Testimonial",
+    "title": "Our Client Say",
+    "items": [
+      {
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.",
+        "clientName": "Stanley Tate",
+        "clientTitle": "Chief Officer of GCS"
+      },
+      {
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.",
+        "clientName": "Lana Shelton",
+        "clientTitle": "Chief Officer of GCS"
+      },
+      {
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.",
+        "clientName": "Mario Houston",
+        "clientTitle": "Chief Officer of GCS"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Cybersecurity Resources"
+  },
+  "whyChooseUs": {
+    "sectionTitle": "Why Choose Us",
+    "title": "Powerful Cybersecurity Solution",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "features": [
+      "High-Fidelity Detection",
+      "Proactive Defense",
+      "Intelligent traffic selection",
+      "Zero-day threat protection",
+      "Covers all ports/protocols",
+      "Firewall, IDS & IPS"
+    ]
+  },
+  "protectData": {
+    "sectionTitle": "What We Provide",
+    "title": "Start Protecting Your Data Today",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "services": [
+      "Cloud Security",
+      "Malware Detection Removal",
+      "Testing Cyber Security",
+      "Identifying Threats",
+      "Managed IT Service",
+      "SIEM Threat Detection"
+    ]
+  },
+  "team": {
+    "sectionTitle": "Meet the Team",
+    "title": "Team Member",
+    "members": [
+      {
+        "name": "Lewis Lucas",
+        "designation": "CEO"
+      },
+      {
+        "name": "Arturo Fuller",
+        "designation": "CTO"
+      },
+      {
+        "name": "Velma Cain",
+        "designation": "CFO"
+      },
+      {
+        "name": "Marc Gibbs",
+        "designation": "CMO"
+      }
+    ]
+  }
+}
