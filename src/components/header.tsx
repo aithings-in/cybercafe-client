@@ -198,8 +198,18 @@ export default function Header() {
         </Link>
       </nav>
 
-      {/* Desktop Language Toggle Button - Right aligned */}
+      {/* Desktop Upload Document Button and Language Toggle - Right aligned */}
       <div className="hidden lg:flex items-center gap-3 z-10">
+        <Link
+          href="/upload-document"
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-medium ${
+            isScrolled
+              ? "bg-blue-500 hover:bg-blue-600 text-white"
+              : "bg-blue-500 hover:bg-blue-600 text-white"
+          }`}
+        >
+          {t("common.uploadDocument")}
+        </Link>
         <button
           onClick={toggleLocale}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-medium ${
@@ -305,6 +315,19 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t("common.contact")}
+            </Link>
+
+            {/* Mobile Upload Document Button */}
+            <Link
+              href="/upload-document"
+              className={`flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-medium w-full ${
+                isScrolled
+                  ? "bg-blue-500 hover:bg-blue-600 text-white"
+                  : "bg-blue-500 hover:bg-blue-600 text-white"
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("common.uploadDocument")}
             </Link>
 
             {/* Mobile Language Toggle */}

@@ -4,36 +4,20 @@ import ResourceCard from "./resource-card";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/hooks/useTranslation";
 
-const resources = [
-  {
-    imageSrc: "/images/resources/network-global.jpg",
-    imageAlt: "Global network connectivity",
-  },
-  {
-    imageSrc: "/images/resources/ai-brain.jpg",
-    imageAlt: "Artificial intelligence and advanced computing",
-  },
-  {
-    imageSrc: "/images/resources/cloud-security.jpg",
-    imageAlt: "Cloud security with shield protection",
-  },
-  {
-    imageSrc: "/images/resources/earth-network.jpg",
-    imageAlt: "Global network with Earth view",
-  },
-  {
-    imageSrc: "/images/resources/circuit-board.jpg",
-    imageAlt: "Advanced digital infrastructure",
-  },
-  {
-    imageSrc: "/images/resources/digital-security.jpg",
-    imageAlt: "Digital security interface with padlocks",
-  },
-];
-
 export default function ResourcesSection() {
   const { t } = useTranslation();
-  
+
+  // Get resources from translations
+  const resourcesData = t("resources.items");
+  const resources = Array.isArray(resourcesData)
+    ? (resourcesData as Array<{
+        imageSrc: string;
+        imageAlt: string;
+        title: string;
+        description: string;
+      }>)
+    : [];
+
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,6 +41,8 @@ export default function ResourcesSection() {
               key={index}
               imageSrc={resource.imageSrc}
               imageAlt={resource.imageAlt}
+              title={resource.title}
+              description={resource.description}
               index={index}
             />
           ))}
@@ -65,4 +51,3 @@ export default function ResourcesSection() {
     </section>
   );
 }
-

@@ -34,10 +34,15 @@ export function t(
   }
 
   // If value is a string and has params, replace them
+  // Support both {{key}} and {key} formats
   if (typeof value === "string" && params) {
-    return value.replace(/\{\{(\w+)\}\}/g, (match, paramKey) => {
-      return params[paramKey]?.toString() || match;
-    });
+    return value
+      .replace(/\{\{(\w+)\}\}/g, (match, paramKey) => {
+        return params[paramKey]?.toString() || match;
+      })
+      .replace(/\{(\w+)\}/g, (match, paramKey) => {
+        return params[paramKey]?.toString() || match;
+      });
   }
 
   return value;

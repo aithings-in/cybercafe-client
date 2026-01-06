@@ -74,11 +74,8 @@ export default function ServicesSection({
             return (
               <motion.div key={service.id} variants={itemVariants}>
                 <ServiceCard
-                  title={translatedService?.title || service.title}
-                  description={
-                    translatedService?.shortDescription ||
-                    service.shortDescription
-                  }
+                  title={translatedService?.title || `Service ${service.id}`}
+                  description={translatedService?.shortDescription || ""}
                   imageSrc={service.image}
                   imageAlt={service.imageAlt}
                   href={`/services/${service.id}`}

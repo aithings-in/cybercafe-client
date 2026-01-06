@@ -39,7 +39,7 @@ export default function HeroSection() {
   // Auto-play carousel
   useEffect(() => {
     if (slides.length === 0) return;
-    
+
     const interval = setInterval(() => {
       if (!isAnimating) {
         setIsAnimating(true);
@@ -196,38 +196,6 @@ export default function HeroSection() {
           >
             {currentSlideData.description}
           </p>
-          <div
-            key={`buttons-${currentSlide}`}
-            className={`flex flex-col sm:flex-row gap-4 pt-4 justify-center ${
-              isAnimating ? "animate-fade-in" : ""
-            }`}
-          >
-            <Link href="/services">
-              <button className="bg-white text-blue-500 hover:bg-gray-100 font-medium px-8 py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto border-2 border-transparent">
-                {currentSlideData.button1Text}
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="bg-[#00d4ff] hover:bg-[#00b8e6] text-white font-medium px-8 py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
-                {currentSlideData.button2Text}
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Profile Picture - Bottom Right */}
-      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-300 overflow-hidden border-2 border-white/20 shadow-lg">
-          <div className="w-full h-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
-            <svg
-              className="w-8 h-8 sm:w-10 sm:h-10 text-amber-600"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-            </svg>
-          </div>
         </div>
       </div>
 

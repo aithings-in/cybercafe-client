@@ -57,11 +57,11 @@ export default function ServiceDetailPage() {
     <>
       {/* Page Hero Banner */}
       <PageHero
-        title={translatedService?.title || service.title}
+        title={translatedService?.title || `Service ${serviceId}`}
         breadcrumbs={[
           { label: t("common.home"), href: "/" },
           { label: t("common.services"), href: "/services" },
-          { label: translatedService?.title || service.title },
+          { label: translatedService?.title || `Service ${serviceId}` },
         ]}
       />
 
@@ -101,7 +101,7 @@ export default function ServiceDetailPage() {
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                      service.title
+                      translatedService?.title || `Service ${serviceId}`
                     )}&background=3b82f6&color=fff&size=400`;
                   }}
                 />
@@ -118,8 +118,7 @@ export default function ServiceDetailPage() {
                   {t("services.aboutService")}
                 </h2>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  {translatedService?.fullDescription ||
-                    service.fullDescription}
+                  {translatedService?.fullDescription || ""}
                 </p>
               </motion.div>
 
@@ -170,8 +169,7 @@ export default function ServiceDetailPage() {
                   {t("services.quickOverview")}
                 </h3>
                 <p className="text-base text-gray-700">
-                  {translatedService?.shortDescription ||
-                    service.shortDescription}
+                  {translatedService?.shortDescription || ""}
                 </p>
               </motion.div>
 
@@ -187,10 +185,10 @@ export default function ServiceDetailPage() {
                   {t("services.keyFeatures")}
                 </h3>
                 <ul className="space-y-3">
-                  {(translatedService?.features || service.features).map(
+                  {(translatedService?.features || []).map(
                     (feature: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                         <span className="text-base text-gray-700">
                           {feature}
                         </span>
@@ -212,10 +210,10 @@ export default function ServiceDetailPage() {
                   {t("services.benefits")}
                 </h3>
                 <ul className="space-y-3">
-                  {(translatedService?.benefits || service.benefits).map(
+                  {(translatedService?.benefits || []).map(
                     (benefit: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
                         <span className="text-base text-gray-700">
                           {benefit}
                         </span>

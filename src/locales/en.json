@@ -13,38 +13,39 @@
     "backToServices": "Back to Services",
     "serviceNotFound": "Service Not Found",
     "serviceNotFoundDesc": "The service you're looking for doesn't exist.",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "uploadDocument": "Upload Document"
   },
   "header": {
-    "title": "Cyber Cafe"
+    "title": "Maan Cyber World"
   },
   "hero": {
     "slides": [
       {
-        "heading": "Your Cyber Security",
-        "headingHighlight": "Is In Your Hand Now",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, magna aliqua. ipsum is simply dummy text of the printing.",
+        "heading": "Your Computer Education",
+        "headingHighlight": "Path to Success",
+        "description": "Enhance your skills with our comprehensive computer training programs. Master courses like Typing Master, Tally GST, Graphic Designing, Excel, AutoCAD, and ADCA to build a successful career.",
         "button1": "Our Services",
         "button2": "Contact Us"
       },
       {
         "heading": "We Provide The Best",
-        "headingHighlight": "Cyber Security",
-        "description": "Protect your digital assets with our cutting-edge cybersecurity solutions. We offer comprehensive protection against all types of cyber threats.",
+        "headingHighlight": "Computer Training",
+        "description": "Get professional computer education with experienced instructors and modern facilities. Our one-to-one ratio approach ensures personalized attention and practical learning.",
         "button1": "Discover More",
         "button2": "Contact Us"
       },
       {
-        "heading": "Advanced Security",
-        "headingHighlight": "Solutions For You",
-        "description": "Trust our team of cybersecurity experts to safeguard your business. We provide 24/7 monitoring and rapid response to security incidents.",
+        "heading": "Skill Development",
+        "headingHighlight": "For Your Career",
+        "description": "With 15 years of experience and 14,500+ trained students, we provide industry-standard computer skills that help advance your career in today's competitive world.",
         "button1": "Learn More",
         "button2": "Get Started"
       }
     ]
   },
   "footer": {
-    "companyName": "Cyber Cafe",
+    "companyName": "Maan Cyber World",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.",
     "contactInfo": "Contact Info",
     "address": "770 East Linden Street New York",
@@ -52,15 +53,15 @@
     "email": "contact-info@example.com",
     "ourServices": "Our Services",
     "services": [
-      "Managed Firewall",
-      "Virtual CISO",
-      "Penetration Testing",
-      "Networking Security",
-      "Cloud Security"
+      "Typing Master",
+      "Tally GST",
+      "Graphic Designing Training",
+      "Excel Training",
+      "AutoCAD Training"
     ],
     "subscribeNewsletter": "Subscribe Newsletter",
     "enterEmail": "Enter your email",
-    "copyright": "© 2023 - All Rights Reserved - Designed by Barakah Themes",
+    "copyright": "© {year} - All Rights Reserved",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy"
   },
@@ -246,6 +247,120 @@
           "Internet and email usage",
           "Basic programming and web design concepts"
         ]
+      },
+      {
+        "id": 7,
+        "title": "CSC Center",
+        "shortDescription": "Common Service Center providing government and private services to citizens in a convenient and accessible manner.",
+        "fullDescription": "Our CSC (Common Service Center) provides a wide range of government and private services to citizens, making essential services easily accessible. We offer services including Aadhaar enrollment and updates, PAN card applications, voter ID services, utility bill payments, insurance services, banking services, and various government scheme registrations. Our trained staff ensures smooth and efficient service delivery with proper documentation and support.",
+        "features": [
+          "Aadhaar enrollment and updates",
+          "PAN card and voter ID services",
+          "Utility bill payments",
+          "Government scheme registrations",
+          "Banking and insurance services",
+          "Documentation and form filling assistance"
+        ],
+        "benefits": [
+          "Easy access to government services",
+          "Professional assistance with documentation",
+          "Time-saving service delivery",
+          "Digital literacy support",
+          "Convenient location for local residents"
+        ],
+        "process": [
+          "Service inquiry and consultation",
+          "Document verification and collection",
+          "Application processing",
+          "Payment processing",
+          "Service completion and receipt"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Computer Coaching Center",
+        "shortDescription": "Comprehensive computer coaching programs for students of all ages, from basic computer literacy to advanced programming.",
+        "fullDescription": "Our Computer Coaching Center offers structured computer education programs designed for students, professionals, and individuals looking to enhance their computer skills. We provide courses covering computer fundamentals, programming languages, software applications, web development, and IT certifications. Our experienced instructors use a combination of theoretical knowledge and hands-on practice to ensure effective learning. We offer flexible schedules including weekend batches and evening classes to accommodate working professionals and students.",
+        "features": [
+          "Structured curriculum for all levels",
+          "Experienced and qualified instructors",
+          "Hands-on practical training",
+          "Flexible batch timings",
+          "Certification programs",
+          "Placement assistance"
+        ],
+        "benefits": [
+          "Build strong computer foundation",
+          "Learn industry-relevant skills",
+          "Improve career prospects",
+          "Gain recognized certifications",
+          "Personalized attention and support"
+        ],
+        "process": [
+          "Skill assessment and counseling",
+          "Course selection and enrollment",
+          "Regular classes and practical sessions",
+          "Progress assessments and feedback",
+          "Certification and placement support"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Computer Hardware Repair",
+        "shortDescription": "Learn computer hardware maintenance, troubleshooting, and repair skills for a career in IT support and hardware services.",
+        "fullDescription": "Our Computer Hardware Repair course provides comprehensive training in computer hardware components, assembly, maintenance, and troubleshooting. Learn to identify and fix hardware issues, assemble and disassemble computers, install operating systems, and diagnose various hardware problems. The course covers motherboard, processor, RAM, storage devices, power supply, cooling systems, peripherals, and networking hardware. You'll gain hands-on experience in hardware repair, component replacement, BIOS configuration, and system optimization. Perfect for those seeking careers in IT support, computer repair shops, or hardware maintenance roles.",
+        "features": [
+          "Computer hardware components and assembly",
+          "Hardware troubleshooting and diagnosis",
+          "Component replacement and repair",
+          "Operating system installation",
+          "BIOS configuration and optimization",
+          "System maintenance and upgrades"
+        ],
+        "benefits": [
+          "Become a certified hardware technician",
+          "Master hardware troubleshooting skills",
+          "Improve job opportunities in IT support",
+          "Learn practical repair techniques",
+          "Start your own repair business"
+        ],
+        "process": [
+          "Introduction to computer hardware",
+          "Hardware components identification",
+          "Assembly and disassembly techniques",
+          "Troubleshooting and diagnosis methods",
+          "Repair and component replacement",
+          "System optimization and testing"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Data Entry",
+        "shortDescription": "Master data entry skills including typing speed, accuracy, and working with various data formats for efficient data management.",
+        "fullDescription": "Our Data Entry course provides comprehensive training in data entry operations, typing techniques, and data management. Learn to enter data accurately and efficiently using keyboard shortcuts, improve typing speed and accuracy, and work with various data formats including spreadsheets, databases, and forms. The course covers data entry fundamentals, keyboard proficiency, accuracy improvement techniques, data validation, formatting, and working with different software applications. You'll gain practical experience in handling large volumes of data, maintaining accuracy standards, and meeting productivity targets. Perfect for those seeking careers in data entry, administrative roles, or data management positions.",
+        "features": [
+          "Data entry fundamentals and techniques",
+          "Typing speed and accuracy improvement",
+          "Keyboard shortcuts and efficiency",
+          "Working with spreadsheets and databases",
+          "Data validation and formatting",
+          "Software applications for data entry"
+        ],
+        "benefits": [
+          "Master data entry skills",
+          "Improve typing speed and accuracy",
+          "Enhance productivity in data management",
+          "Increase job opportunities in administrative roles",
+          "Work efficiently with large data volumes"
+        ],
+        "process": [
+          "Data entry fundamentals",
+          "Typing speed building exercises",
+          "Accuracy improvement techniques",
+          "Working with different data formats",
+          "Data validation and quality control",
+          "Practical projects and assessments"
+        ]
       }
     ]
   },
@@ -266,6 +381,27 @@
     "yourPhone": "Your Phone",
     "yourSubject": "Your Subject",
     "yourMessage": "Your Message"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "termsAndConditions": "Terms and Conditions",
+    "termsContent1": "Welcome to Maan Cyber World & Computer Institute. By accessing and using our website and services, you agree to be bound by these Terms and Conditions. Please read them carefully before using our services. Our computer training programs, including Typing Master, Tally GST, Graphic Designing, Excel Training, AutoCAD Training, and ADCA courses, are designed to provide quality education and skill development.",
+    "termsContent2": "All course materials, curriculum, and training content provided by our institute are protected by copyright and intellectual property laws. Students are granted access to course materials for personal educational use only. Unauthorized distribution, reproduction, or commercial use of our training materials is strictly prohibited. We reserve the right to modify course content, schedules, and fees at any time with prior notice to enrolled students.",
+    "dataSecurityCommitment": "Our Commitment To Data Security",
+    "securityContent1": "At Maan Cyber World & Computer Institute, we take data security and privacy seriously. We are committed to protecting the personal information of our students, staff, and website visitors. All student records, enrollment information, and personal data are stored securely and handled in accordance with applicable data protection regulations.",
+    "securityContent2": "We implement industry-standard security measures to safeguard your information, including secure data encryption, access controls, and regular security audits. Your personal information is used solely for educational and administrative purposes, such as course enrollment, progress tracking, and communication regarding our services. We do not sell, trade, or share your personal information with third parties without your explicit consent.",
+    "securityContent3": "If you have any concerns about data security or wish to access, modify, or delete your personal information, please contact us through our official channels. We are dedicated to maintaining transparency and ensuring the highest standards of data protection for all members of our educational community."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "introductionTitle": "Introduction - Terms of use Agreement",
+    "introductionContent1": "Welcome to Maan Cyber World & Computer Institute's Privacy Policy. This document outlines how we collect, use, store, and protect your personal information when you interact with our website, enroll in our courses, or use our services. By accessing our website or using our services, you agree to the terms outlined in this privacy policy.",
+    "introductionContent2": "We are committed to protecting your privacy and ensuring the security of your personal data. This policy applies to all information collected through our website, enrollment forms, course registrations, and any other interactions with our institute. We collect information such as your name, contact details, email address, phone number, course preferences, and payment information to provide you with quality educational services and maintain accurate student records.",
+    "introductionContent3": "Your personal information is used solely for educational and administrative purposes, including course enrollment, progress tracking, communication regarding courses and services, sending important updates, and processing payments. We do not share, sell, or rent your personal information to third parties for marketing purposes. We may share information only when required by law or with your explicit consent.",
+    "paymentMethodsTitle": "Acceptable payment methods",
+    "paymentContent1": "At Maan Cyber World & Computer Institute, we accept various secure payment methods to make course enrollment convenient for our students. We accept cash payments at our institute location, bank transfers, online payment gateways, and digital payment methods such as UPI, credit cards, and debit cards. All payment transactions are processed through secure and encrypted channels to ensure the safety of your financial information.",
+    "paymentContent2": "For course fees and other charges, we provide detailed invoices and receipts for all transactions. Payment confirmation is sent via email or SMS to the contact information provided during enrollment. We maintain strict confidentiality regarding payment information and do not store complete credit card or bank account details on our servers. All financial data is handled in compliance with applicable financial regulations and data protection laws.",
+    "paymentContent3": "If you have any questions about payment methods, refund policies, or need assistance with payment processing, please contact our administrative office. We are committed to providing transparent and secure payment options for all our students and ensuring a smooth enrollment experience."
   },
   "about": {
     "title": "About Us",
@@ -319,32 +455,98 @@
     ]
   },
   "resources": {
-    "title": "Cybersecurity Resources"
+    "title": "Computer Training Resources",
+    "items": [
+      {
+        "imageSrc": "/images/typing.jpg",
+        "imageAlt": "Typing training and keyboard skills",
+        "title": "Typing Master Course",
+        "description": "Master fast and accurate typing skills with our comprehensive typing training program."
+      },
+      {
+        "imageSrc": "/images/telly.jpg",
+        "imageAlt": "Tally GST accounting software training",
+        "title": "Tally GST Training",
+        "description": "Learn professional accounting with Tally Prime and GST compliance for business success."
+      },
+      {
+        "imageSrc": "/images/graphicDesign.jpg",
+        "imageAlt": "Graphic design and creative skills training",
+        "title": "Graphic Design Course",
+        "description": "Create stunning visual designs with Adobe Photoshop, Illustrator, and CorelDRAW."
+      },
+      {
+        "imageSrc": "/images/excel.jpg",
+        "imageAlt": "Microsoft Excel data analysis training",
+        "title": "Excel Training Program",
+        "description": "Master Excel from basics to advanced data analysis, formulas, and automation."
+      },
+      {
+        "imageSrc": "/images/AUTOCAD.jpeg",
+        "imageAlt": "AutoCAD technical drawing and design",
+        "title": "AutoCAD Training",
+        "description": "Learn professional CAD skills for architecture, engineering, and technical drawing."
+      },
+      {
+        "imageSrc": "/images/ADCA.jpeg",
+        "imageAlt": "Computer education and skill development",
+        "title": "ADCA Diploma Course",
+        "description": "Complete computer applications diploma covering all essential digital skills."
+      },
+      {
+        "imageSrc": "/images/cscCenter.jpg",
+        "imageAlt": "CSC Center services",
+        "title": "CSC Center",
+        "description": "Common Service Center providing government and private services to citizens in a convenient and accessible manner."
+      },
+      {
+        "imageSrc": "/images/coaching.jpg",
+        "imageAlt": "Computer coaching center",
+        "title": "Computer Coaching Center",
+        "description": "Comprehensive computer coaching programs for students of all ages, from basic computer literacy to advanced programming."
+      },
+      {
+        "imageSrc": "/images/hardware.jpg",
+        "imageAlt": "Computer hardware repair training",
+        "title": "Computer Hardware Repair",
+        "description": "Learn computer hardware maintenance, troubleshooting, and repair skills for a career in IT support and hardware services."
+      },
+      {
+        "imageSrc": "/images/dataEntry.jpg",
+        "imageAlt": "Data entry training",
+        "title": "Data Entry",
+        "description": "Master data entry skills including typing speed, accuracy, and working with various data formats for efficient data management."
+      }
+    ]
   },
   "whyChooseUs": {
     "sectionTitle": "Why Choose Us",
-    "title": "Powerful Cybersecurity Solution",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title": "Powerful Computer Education Solution",
+    "description": "At our institution, we focus on practical learning and industry-standard skills. Our one-to-one ratio approach ensures that each student receives personalized attention and acquires the skills needed to achieve their career goals.",
     "features": [
-      "High-Fidelity Detection",
-      "Proactive Defense",
-      "Intelligent traffic selection",
-      "Zero-day threat protection",
-      "Covers all ports/protocols",
-      "Firewall, IDS & IPS"
+      "Practical learning approach",
+      "Experienced and qualified instructors",
+      "Modern computer lab facilities",
+      "Industry-standard curriculum",
+      "Personal attention and guidance",
+      "Employment-oriented training"
     ]
   },
   "protectData": {
     "sectionTitle": "What We Provide",
-    "title": "Start Protecting Your Data Today",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title": "Start Your Skill Development Today",
+    "description": "Advance your career with our comprehensive computer training programs. Our courses provide you with the skills needed to succeed in the industry.",
     "services": [
-      "Cloud Security",
-      "Malware Detection Removal",
-      "Testing Cyber Security",
-      "Identifying Threats",
-      "Managed IT Service",
-      "SIEM Threat Detection"
+      "Typing Master",
+      "Tally GST",
+      "Graphic Designing Training",
+      "Excel Training",
+      "AutoCAD Training",
+      "ADCA Training",
+      "CSC Center",
+      "Computer Coaching Center",
+      "Computer Hardware Repair",
+      "Data Entry"
     ]
   },
   "team": {
@@ -368,5 +570,17 @@
         "designation": "CMO"
       }
     ]
+  },
+  "uploadDocument": {
+    "title": "Upload Document",
+    "dragDrop": "Drag & Drop your files here",
+    "orClick": "or click to browse",
+    "selectFiles": "Select Files",
+    "supportedFormats": "Supported formats: PDF, DOC, DOCX, JPG, PNG, XLS, XLSX (Max 10MB per file)",
+    "selectedFiles": "Selected Files",
+    "uploadFiles": "Upload Files",
+    "uploading": "Uploading...",
+    "uploadSuccess": "Files uploaded successfully!",
+    "uploadError": "Error uploading files. Please try again."
   }
 }
