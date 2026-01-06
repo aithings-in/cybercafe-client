@@ -458,61 +458,61 @@
     "title": "Computer Training Resources",
     "items": [
       {
-        "imageSrc": "/images/typing.jpg",
+        "imageSrc": "/images/typing.webp",
         "imageAlt": "Typing training and keyboard skills",
         "title": "Typing Master Course",
         "description": "Master fast and accurate typing skills with our comprehensive typing training program."
       },
       {
-        "imageSrc": "/images/telly.jpg",
+        "imageSrc": "/images/telly.webp",
         "imageAlt": "Tally GST accounting software training",
         "title": "Tally GST Training",
         "description": "Learn professional accounting with Tally Prime and GST compliance for business success."
       },
       {
-        "imageSrc": "/images/graphicDesign.jpg",
+        "imageSrc": "/images/graphicDesign.webp",
         "imageAlt": "Graphic design and creative skills training",
         "title": "Graphic Design Course",
         "description": "Create stunning visual designs with Adobe Photoshop, Illustrator, and CorelDRAW."
       },
       {
-        "imageSrc": "/images/excel.jpg",
+        "imageSrc": "/images/excel.webp",
         "imageAlt": "Microsoft Excel data analysis training",
         "title": "Excel Training Program",
         "description": "Master Excel from basics to advanced data analysis, formulas, and automation."
       },
       {
-        "imageSrc": "/images/AUTOCAD.jpeg",
+        "imageSrc": "/images/AUTOCAD.webp",
         "imageAlt": "AutoCAD technical drawing and design",
         "title": "AutoCAD Training",
         "description": "Learn professional CAD skills for architecture, engineering, and technical drawing."
       },
       {
-        "imageSrc": "/images/ADCA.jpeg",
+        "imageSrc": "/images/ADCA.webp",
         "imageAlt": "Computer education and skill development",
         "title": "ADCA Diploma Course",
         "description": "Complete computer applications diploma covering all essential digital skills."
       },
       {
-        "imageSrc": "/images/cscCenter.jpg",
+        "imageSrc": "/images/cscCenter.webp",
         "imageAlt": "CSC Center services",
         "title": "CSC Center",
         "description": "Common Service Center providing government and private services to citizens in a convenient and accessible manner."
       },
       {
-        "imageSrc": "/images/coaching.jpg",
+        "imageSrc": "/images/coaching.webp",
         "imageAlt": "Computer coaching center",
         "title": "Computer Coaching Center",
         "description": "Comprehensive computer coaching programs for students of all ages, from basic computer literacy to advanced programming."
       },
       {
-        "imageSrc": "/images/hardware.jpg",
+        "imageSrc": "/images/hardware.webp",
         "imageAlt": "Computer hardware repair training",
         "title": "Computer Hardware Repair",
         "description": "Learn computer hardware maintenance, troubleshooting, and repair skills for a career in IT support and hardware services."
       },
       {
-        "imageSrc": "/images/dataEntry.jpg",
+        "imageSrc": "/images/dataEntry.webp",
         "imageAlt": "Data entry training",
         "title": "Data Entry",
         "description": "Master data entry skills including typing speed, accuracy, and working with various data formats for efficient data management."
