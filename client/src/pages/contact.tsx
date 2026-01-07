@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle, XCircle, Loader2 } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import Button from "@/components/button";
 import { useTranslation } from "@/hooks/useTranslation";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
 
 export default function ContactPage() {
   const { t } = useTranslation();
@@ -16,6 +18,11 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,20 +31,59 @@ export default function ContactPage() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    // Clear status when user starts typing
+    if (submitStatus.type) {
+      setSubmitStatus({ type: null, message: "" });
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch(`${API_URL}/leads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus({
+          type: "success",
+          message: data.message || "Thank you! Your message has been sent successfully.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message:
+            data.message ||
+            data.errors?.[0]?.msg ||
+            "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "Network error. Please check your connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -132,6 +178,26 @@ export default function ContactPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 {t("contact.sendUsMessage")}
               </h2>
+
+              {/* Status Messages */}
+              {submitStatus.type && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`p-4 rounded-lg flex items-center gap-3 ${
+                    submitStatus.type === "success"
+                      ? "bg-green-50 text-green-800 border border-green-200"
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}
+                >
+                  {submitStatus.type === "success" ? (
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  ) : (
+                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                  )}
+                  <p className="text-sm font-medium">{submitStatus.message}</p>
+                </motion.div>
+              )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Two Column Grid for First 4 Fields */}
@@ -241,9 +307,17 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   variant="primary"
-                  className="w-full md:w-auto px-8 py-3 rounded-lg"
+                  className="w-full md:w-auto px-8 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isSubmitting}
                 >
-                  {t("common.sendMessage")}
+                  {isSubmitting ? (
+                    <span className="flex items-center gap-2">
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Sending...
+                    </span>
+                  ) : (
+                    t("common.sendMessage")
+                  )}
                 </Button>
               </form>
             </motion.div>
