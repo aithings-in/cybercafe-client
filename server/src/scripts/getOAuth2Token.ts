@@ -20,7 +20,9 @@ dotenv.config({
 
 const CLIENT_ID = process.env.GOOGLE_DRIVE_CLIENT_ID;
 const CLIENT_SECRET = process.env.GOOGLE_DRIVE_CLIENT_SECRET;
-const REDIRECT_URI = process.env.GOOGLE_DRIVE_REDIRECT_URI || "http://localhost:5000/oauth2callback";
+const REDIRECT_URI =
+  process.env.GOOGLE_DRIVE_REDIRECT_URI ||
+  "http://localhost:5000/oauth2callback";
 
 if (!CLIENT_ID || !CLIENT_SECRET) {
   console.error(
