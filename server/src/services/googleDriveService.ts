@@ -1,7 +1,8 @@
+import dotenv from "dotenv";
 import { google } from "googleapis";
 import { Readable } from "stream";
-import path from "path";
-import fs from "fs";
+
+dotenv.config();
 
 interface UploadToDriveOptions {
   fileName: string;
@@ -34,9 +35,7 @@ class GoogleDriveService {
       const clientId = process.env.GOOGLE_DRIVE_CLIENT_ID;
       const clientSecret = process.env.GOOGLE_DRIVE_CLIENT_SECRET;
       const refreshToken = process.env.GOOGLE_DRIVE_REFRESH_TOKEN;
-      const redirectUri =
-        process.env.GOOGLE_DRIVE_REDIRECT_URI ||
-        "http://localhost:5000/auth/google/callback";
+      const redirectUri = process.env.GOOGLE_DRIVE_REDIRECT_URI;
 
       if (!clientId || !clientSecret || !refreshToken) {
         throw new Error(
