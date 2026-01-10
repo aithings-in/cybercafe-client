@@ -2,7 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, CheckCircle, XCircle, Loader2 } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  CheckCircle,
+  XCircle,
+  Loader2,
+} from "lucide-react";
 import PageHero from "@/components/page-hero";
 import Button from "@/components/button";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -23,22 +30,131 @@ export default function ContactPage() {
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    phone?: string;
+    subject?: string;
+    message?: string;
+  }>({});
+
+  // Validation functions
+  const validateName = (name: string): string | undefined => {
+    const trimmed = name.trim();
+    if (!trimmed) return "Name is required";
+    if (trimmed.length < 2) return "Name must be at least 2 characters";
+    if (trimmed.length > 100) return "Name must be less than 100 characters";
+    return undefined;
+  };
+
+  const validateEmail = (email: string): string | undefined => {
+    const trimmed = email.trim();
+    if (!trimmed) return "Email is required";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmed))
+      return "Please provide a valid email address";
+    return undefined;
+  };
+
+  const validatePhone = (phone: string): string | undefined => {
+    const trimmed = phone.trim();
+    if (!trimmed) return "Phone number is required";
+    if (trimmed.length < 10)
+      return "Phone number must be at least 10 characters";
+    if (trimmed.length > 15)
+      return "Phone number must be less than 15 characters";
+    return undefined;
+  };
+
+  const validateSubject = (subject: string): string | undefined => {
+    const trimmed = subject.trim();
+    if (!trimmed) return "Subject is required";
+    if (trimmed.length < 3) return "Subject must be at least 3 characters";
+    if (trimmed.length > 200) return "Subject must be less than 200 characters";
+    return undefined;
+  };
+
+  const validateMessage = (message: string): string | undefined => {
+    const trimmed = message.trim();
+    if (!trimmed) return "Message is required";
+    if (trimmed.length < 10) return "Message must be at least 10 characters";
+    if (trimmed.length > 1000)
+      return "Message must be less than 1000 characters";
+    return undefined;
+  };
+
+  const validateField = (name: string, value: string): void => {
+    let error: string | undefined;
+
+    switch (name) {
+      case "name":
+        error = validateName(value);
+        break;
+      case "email":
+        error = validateEmail(value);
+        break;
+      case "phone":
+        error = validatePhone(value);
+        break;
+      case "subject":
+        error = validateSubject(value);
+        break;
+      case "message":
+        error = validateMessage(value);
+        break;
+    }
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+
+    // Validate field on change
+    validateField(name, value);
+
     // Clear status when user starts typing
     if (submitStatus.type) {
       setSubmitStatus({ type: null, message: "" });
     }
   };
 
+  const validateForm = (): boolean => {
+    const newErrors: typeof errors = {};
+
+    newErrors.name = validateName(formData.name);
+    newErrors.email = validateEmail(formData.email);
+    newErrors.phone = validatePhone(formData.phone);
+    newErrors.subject = validateSubject(formData.subject);
+    newErrors.message = validateMessage(formData.message);
+
+    setErrors(newErrors);
+
+    // Check if there are any errors
+    return !Object.values(newErrors).some((error) => error !== undefined);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate form before submission
+    if (!validateForm()) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please fix the errors in the form before submitting.",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
@@ -56,9 +172,11 @@ export default function ContactPage() {
       if (response.ok && data.success) {
         setSubmitStatus({
           type: "success",
-          message: data.message || "Thank you! Your message has been sent successfully.",
+          message:
+            data.message ||
+            "Thank you! Your message has been sent successfully.",
         });
-        // Reset form
+        // Reset form and errors
         setFormData({
           name: "",
           email: "",
@@ -66,6 +184,7 @@ export default function ContactPage() {
           subject: "",
           message: "",
         });
+        setErrors({});
       } else {
         setSubmitStatus({
           type: "error",
@@ -216,10 +335,20 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
+                      onBlur={(e) => validateField("name", e.target.value)}
                       placeholder={t("contact.yourName")}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
+                        errors.name
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300 focus:ring-blue-500"
+                      }`}
                       required
+                      minLength={2}
+                      maxLength={100}
                     />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                    )}
                   </div>
 
                   {/* Your Email */}
@@ -236,10 +365,20 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      onBlur={(e) => validateField("email", e.target.value)}
                       placeholder={t("contact.yourEmail")}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
+                        errors.email
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300 focus:ring-blue-500"
+                      }`}
                       required
                     />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   {/* Your Phone */}
@@ -256,10 +395,22 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
+                      onBlur={(e) => validateField("phone", e.target.value)}
                       placeholder={t("contact.yourPhone")}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
+                        errors.phone
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300 focus:ring-blue-500"
+                      }`}
                       required
+                      minLength={10}
+                      maxLength={15}
                     />
+                    {errors.phone && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.phone}
+                      </p>
+                    )}
                   </div>
 
                   {/* Your Subject */}
@@ -276,10 +427,22 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
+                      onBlur={(e) => validateField("subject", e.target.value)}
                       placeholder={t("contact.yourSubject")}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
+                        errors.subject
+                          ? "border-red-300 focus:ring-red-500"
+                          : "border-gray-300 focus:ring-blue-500"
+                      }`}
                       required
+                      minLength={3}
+                      maxLength={200}
                     />
+                    {errors.subject && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.subject}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -290,17 +453,43 @@ export default function ContactPage() {
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     {t("contact.yourMessage")}
+                    <span className="text-gray-500 text-xs ml-2">
+                      ({formData.message.trim().length}/1000)
+                    </span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    onBlur={(e) => validateField("message", e.target.value)}
                     placeholder={t("contact.yourMessage")}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent resize-y ${
+                      errors.message
+                        ? "border-red-300 focus:ring-red-500"
+                        : "border-gray-300 focus:ring-blue-500"
+                    }`}
                     required
+                    minLength={10}
+                    maxLength={1000}
                   />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.message}
+                    </p>
+                  )}
+                  {!errors.message && formData.message.trim().length > 0 && (
+                    <p className="mt-1 text-xs text-gray-500">
+                      {formData.message.trim().length < 10
+                        ? `Minimum ${
+                            10 - formData.message.trim().length
+                          } more characters required`
+                        : `${
+                            1000 - formData.message.trim().length
+                          } characters remaining`}
+                    </p>
+                  )}
                 </div>
 
                 {/* Submit Button */}
@@ -328,7 +517,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="w-full h-[500px] md:h-[600px] relative">
         <iframe
-          src="https://www.google.com/maps/place/MAAN+CYBER+WORLD+%26+COMPUTER+INSTITUTE/@27.5941466,78.0457275,19z/data=!3m1!4b1!4m6!3m5!1s0x39749bae9e5910e7:0xd69922178ff379b6!8m2!3d27.5941466!4d78.0463712!16s%2Fg%2F11ytg63hpc?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
+          src={t("contact.map")}
           width="100%"
           height="100%"
           style={{ border: 0 }}

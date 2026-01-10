@@ -71,10 +71,34 @@ export const uploadToDrive = async (req: Request, res: Response): Promise<void> 
     });
   } catch (error: any) {
     console.error("Error uploading to Google Drive:", error);
+    
+    // Extract detailed error information
+    let errorMessage = "Failed to upload files to Google Drive";
+    let errorDetails: any = undefined;
+
+    if (error?.message) {
+      errorMessage = error.message;
+    }
+
+    // Handle Google API errors
+    if (error?.response?.data?.error) {
+      const apiError = error.response.data.error;
+      errorMessage = apiError.message || errorMessage;
+      errorDetails = {
+        code: apiError.code,
+        status: apiError.status,
+        errors: apiError.errors,
+      };
+    }
+
+    // Always show error details in development, show user-friendly message in production
     res.status(500).json({
       success: false,
-      message: "Failed to upload files to Google Drive",
-      error: process.env.NODE_ENV === "development" ? error.message : undefined,
+      message: errorMessage,
+      ...(process.env.NODE_ENV === "development" && {
+        error: errorDetails || error.message,
+        stack: error.stack,
+      }),
     });
   }
 };

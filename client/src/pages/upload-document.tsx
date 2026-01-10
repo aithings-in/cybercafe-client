@@ -116,13 +116,13 @@ export default function UploadDocumentPage() {
   return (
     <>
       {/* Page Hero Banner */}
-      <PageHero
+      {/* <PageHero
         title={t("uploadDocument.title")}
         breadcrumbs={[
           { label: t("common.home"), href: "/" },
           { label: t("uploadDocument.title") },
         ]}
-      />
+      /> */}
 
       {/* Upload Document Section */}
       <section className="py-12 md:py-20 bg-gray-50">

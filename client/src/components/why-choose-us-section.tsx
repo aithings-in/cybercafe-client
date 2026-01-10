@@ -46,10 +46,7 @@ export default function WhyChooseUsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
-                  <FeatureItem
-                    text={feature}
-                    isHighlighted={index === 0}
-                  />
+                  <FeatureItem text={feature} isHighlighted={index === 0} />
                 </motion.div>
               ))}
             </div>
@@ -64,12 +61,9 @@ export default function WhyChooseUsSection() {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="/images/why-choose-us-illustration.png"
+              src={t("whyChooseUs.image")}
               alt="Cybersecurity solution illustration"
               className="w-full h-full object-contain"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
             />
           </motion.div>
         </div>

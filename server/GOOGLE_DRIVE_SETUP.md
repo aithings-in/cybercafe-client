@@ -13,7 +13,7 @@ This guide will help you set up Google Drive API integration for file uploads.
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project or select an existing one
-3. Note your project ID
+3. Note your project ID // delta-env-258202
 
 ### 2. Enable Google Drive API
 
@@ -33,6 +33,8 @@ This guide will help you set up Google Drive API integration for file uploads.
 6. Click **Done**
 
 ### 4. Create Service Account Key
+
+63780053120-rl752qroe79logbaj6jjae2oslagq529.apps.googleusercontent.com
 
 1. Click on the service account you just created
 2. Go to the **Keys** tab

@@ -36,7 +36,7 @@
         "button2": "Contact Us"
       },
       {
-        "heading": "Skill Development",
+        "heading": "Skill",
         "headingHighlight": "For Your Career",
         "description": "With 15 years of experience and 14,500+ trained students, we provide industry-standard computer skills that help advance your career in today's competitive world.",
         "button1": "Learn More",
@@ -67,7 +67,7 @@
   },
   "services": {
     "title": "What We Provide",
-    "sectionTitle": "Cyber Security Services",
+    "sectionTitle": "Our Services",
     "aboutService": "About This Service",
     "quickOverview": "Quick Overview",
     "keyFeatures": "Key Features",
@@ -143,7 +143,7 @@
           "CorelDRAW for layout design",
           "Logo and brand identity design",
           "Print and digital media design",
-          "Portfolio development"
+          "Portfolio"
         ],
         "benefits": [
           "Create professional designs for clients",
@@ -280,7 +280,7 @@
         "id": 8,
         "title": "Computer Coaching Center",
         "shortDescription": "Comprehensive computer coaching programs for students of all ages, from basic computer literacy to advanced programming.",
-        "fullDescription": "Our Computer Coaching Center offers structured computer education programs designed for students, professionals, and individuals looking to enhance their computer skills. We provide courses covering computer fundamentals, programming languages, software applications, web development, and IT certifications. Our experienced instructors use a combination of theoretical knowledge and hands-on practice to ensure effective learning. We offer flexible schedules including weekend batches and evening classes to accommodate working professionals and students.",
+        "fullDescription": "Our Computer Coaching Center offers structured computer education programs designed for students, professionals, and individuals looking to enhance their computer skills. We provide courses covering computer fundamentals, programming languages, software applications, web, and IT certifications. Our experienced instructors use a combination of theoretical knowledge and hands-on practice to ensure effective learning. We offer flexible schedules including weekend batches and evening classes to accommodate working professionals and students.",
         "features": [
           "Structured curriculum for all levels",
           "Experienced and qualified instructors",
@@ -380,12 +380,13 @@
     "yourEmail": "Your Email",
     "yourPhone": "Your Phone",
     "yourSubject": "Your Subject",
-    "yourMessage": "Your Message"
+    "yourMessage": "Your Message",
+    "map": "https://www.google.com/maps/place/MAAN+CYBER+WORLD+%26+COMPUTER+INSTITUTE/@27.5941466,78.0457275,19z/data=!3m1!4b1!4m6!3m5!1s0x39749bae9e5910e7:0xd69922178ff379b6!8m2!3d27.5941466!4d78.0463712!16s%2Fg%2F11ytg63hpc?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
   },
   "terms": {
     "title": "Terms & Conditions",
     "termsAndConditions": "Terms and Conditions",
-    "termsContent1": "Welcome to Maan Cyber World & Computer Institute. By accessing and using our website and services, you agree to be bound by these Terms and Conditions. Please read them carefully before using our services. Our computer training programs, including Typing Master, Tally GST, Graphic Designing, Excel Training, AutoCAD Training, and ADCA courses, are designed to provide quality education and skill development.",
+    "termsContent1": "Welcome to Maan Cyber World & Computer Institute. By accessing and using our website and services, you agree to be bound by these Terms and Conditions. Please read them carefully before using our services. Our computer training programs, including Typing Master, Tally GST, Graphic Designing, Excel Training, AutoCAD Training, and ADCA courses, are designed to provide quality education and skill.",
     "termsContent2": "All course materials, curriculum, and training content provided by our institute are protected by copyright and intellectual property laws. Students are granted access to course materials for personal educational use only. Unauthorized distribution, reproduction, or commercial use of our training materials is strictly prohibited. We reserve the right to modify course content, schedules, and fees at any time with prior notice to enrolled students.",
     "dataSecurityCommitment": "Our Commitment To Data Security",
     "securityContent1": "At Maan Cyber World & Computer Institute, we take data security and privacy seriously. We are committed to protecting the personal information of our students, staff, and website visitors. All student records, enrollment information, and personal data are stored securely and handled in accordance with applicable data protection regulations.",
@@ -489,7 +490,7 @@
       },
       {
         "imageSrc": "/images/ADCA.webp",
-        "imageAlt": "Computer education and skill development",
+        "imageAlt": "Computer education and skill",
         "title": "ADCA Diploma Course",
         "description": "Complete computer applications diploma covering all essential digital skills."
       },
@@ -523,6 +524,7 @@
     "sectionTitle": "Why Choose Us",
     "title": "Powerful Computer Education Solution",
     "description": "At our institution, we focus on practical learning and industry-standard skills. Our one-to-one ratio approach ensures that each student receives personalized attention and acquires the skills needed to achieve their career goals.",
+    "image": "/images/coaching.webp",
     "features": [
       "Practical learning approach",
       "Experienced and qualified instructors",
@@ -534,8 +536,9 @@
   },
   "protectData": {
     "sectionTitle": "What We Provide",
-    "title": "Start Your Skill Development Today",
+    "title": "Start Your Skill Today",
     "description": "Advance your career with our comprehensive computer training programs. Our courses provide you with the skills needed to succeed in the industry.",
+    "image": "/images/coaching.webp",
     "services": [
       "Typing Master",
       "Tally GST",
